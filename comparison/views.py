@@ -8,7 +8,8 @@ from yelp import get_yelp_business, search_yelp
 from forms import YelpBusinessForm
 
 def home(request):
-  return HttpResponse('Hello World!')
+  #return HttpResponse('Hello World!')
+  return direct_to_template(request, 'home.html', locals())
 
 def search(request):
   username = "Davy Kay"

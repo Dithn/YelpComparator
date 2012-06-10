@@ -1,0 +1,20 @@
+<html>
+  <body>
+
+    Hello, {{ username }}!
+    <br />
+
+    Please input your search term
+
+    <br />
+    Please input your location
+    <br />
+
+    <form method="get" action="{% url compare %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Next" class="nice large radius blue button"/>
+    </form>
+
+  </body>
+</html>
